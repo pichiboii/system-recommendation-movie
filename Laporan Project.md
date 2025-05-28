@@ -113,7 +113,9 @@ Ketika pengguna sebelumnya menyukai film "Death Kiss (2018)" dengan genre sebaga
 |title|genre|
 |-------|---------|
 | Death Kiss (2018)   | [Action, Thriller] |
+
 Maka sistem merekomendasikan 5 film :
+
 |title|genre|
 |-------|---------|
 | Hotel California (2008) | [Action, Thriller] |
@@ -121,6 +123,7 @@ Maka sistem merekomendasikan 5 film :
 |Renegades (2017) | [Action, Thriller] |
 | Alleycats (2016) | [Action, Thriller] |
 | Daylight (Daglicht) (2013) | [Action, Thriller] |
+
 Rekomendasi tersebut relevan karena memiliki genre yang sama yaitu Action dan Thriller.
 
 ### *Top 10 Recommendation (Collaborative Filtering)*
@@ -131,7 +134,9 @@ Untuk pendekatan Collaborative Filtering, sistem memberikan Top-N rekomendasi fi
 | Winter Sleep (Kis Uykusu) (2014)                     | \[Drama]                   |
 | Ex Machina (2015)                                    | \[Drama, Sci-Fi, Thriller] |
 | The Jinx: The Life and Deaths of Robert Durst (2015) | \[Documentary]             |
+
 Maka sistem merekomendasikan 10 film berikut :
+
 | Title                                          | Genre                             |
 | ---------------------------------------------- | --------------------------------- |
 | Girl from Monday, The (2005)                   | \[Action, Comedy, Sci-Fi]         |
@@ -144,6 +149,7 @@ Maka sistem merekomendasikan 10 film berikut :
 | Fever Pitch (2005)                             | \[Comedy, Romance]                |
 | We (2018)                                      | \[Drama]                          |
 | Bad Poems (2018)                               | \[Comedy, Drama]                  |
+
 Rekomendasi tersebut relevan dengan preferensi pengguna, terutama karena banyaknya film yang memiliki genre mirip dengan film-film yang sebelumnya disukai oleh pengguna. Hal ini menunjukkan bahwa model collaborative filtering berhasil mempelajari pola ketertarikan pengguna berdasarkan perilaku pengguna lain yang mirip.
 
 ## **Referensi**
