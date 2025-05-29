@@ -76,7 +76,7 @@ Sebelum membangun model sistem rekomendasi, dilakukan beberapa tahap pembersihan
 ### *Data Preparation - Content-Based Filtering*
 Setelah data dibersihkan, data disiapkan agar dapat digunakan pada pendekatan content-based filtering. Fokus dari pendekatan ini adalah pada informasi konten film, khususnya genre. Berikut adalah tahapan persiapan datanya:
 1. Preprocessing Genre
-Karakter khusus seperti tanda hubung (-) dalam nama genre (misalnya Sci-Fi) diubah menjadi tanpa tanda hubung agar lebih konsisten saat diolah oleh algoritma NLP.
+Karakter khusus seperti tanda hubung (-) dalam nama genre (misalnya Sci-Fi) diubah menjadi tanpa tanda hubung, agar lebih konsisten saat diolah oleh algoritma NLP.
 2. Ekstraksi Fitur dengan TF-IDF
 Untuk merepresentasikan setiap film berdasarkan genre-nya, digunakan teknik TF-IDF (Term Frequency-Inverse Document Frequency). Teknik ini akan mengubah data string genre menjadi vektor numerik yang mencerminkan pentingnya genre tertentu dalam keseluruhan dataset.
 Matriks hasil transformasi ini nantinya digunakan untuk menghitung kemiripan antar film berdasarkan genre, yang menjadi dasar dalam memberikan rekomendasi.
@@ -87,8 +87,10 @@ Untuk pendekatan collaborative filtering, fokusnya adalah pada interaksi antara 
 Dataset diacak terlebih dahulu untuk menghindari bias urutan data ketika dilakukan pembagian data latih dan validasi.
 2. Normalisasi Rating
 Rating yang diberikan pengguna dinormalisasi ke skala 0 hingga 1 menggunakan rumus min-max normalization. Hal ini membantu model lebih cepat konvergen dan menghindari ketimpangan skala input.
+
 ```y = df2['rating'].apply(lambda x: (x - min_rating) / (max_rating - min_rating)).values```
-3. Pemisahan Data untuk Pelatihan dan Validasi
+
+4. Pemisahan Data untuk Pelatihan dan Validasi
 Data disiapkan untuk pelatihan model dengan membentuk pasangan fitur dan target, di mana fitur terdiri dari kombinasi userId dan movieId, sedangkan targetnya adalah rating yang telah dinormalisasi. Selanjutnya, data dibagi menjadi dua bagian, yaitu 80% untuk data pelatihan (training set) dan 20% untuk data validasi (validation set), guna mengevaluasi performa model terhadap data yang belum pernah dilihat sebelumnya.
 
 ## **Modeling**
